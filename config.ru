@@ -1,2 +1,3 @@
-require './bookmarks'
+require './app'
+
 run Sinatra::Application
