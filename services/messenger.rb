@@ -1,5 +1,4 @@
 require 'twilio-ruby'
-require 'dotenv'
 
 class Messenger
   attr_reader :number, :message, :media
@@ -13,6 +12,8 @@ class Messenger
   def send
     twilio.messages.create(message_body)
   end
+
+  private
 
   def message_body
     message = {

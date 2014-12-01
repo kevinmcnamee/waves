@@ -1,6 +1,5 @@
 require 'rest_client'
 require './lib/report'
-require 'dotenv'
 
 class MagicSeaweed
   def self.reports

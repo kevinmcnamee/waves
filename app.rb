@@ -8,6 +8,10 @@ Dotenv.load
 get '/swell' do
   content_type :json
 
+  MagicSeaweed.reports.to_json
+end
+
+get 'sms' do
   reports = MagicSeaweed.reports
 
   Messenger.new(
@@ -16,5 +20,5 @@ get '/swell' do
     reports.first.swell_chart
   ).send
 
-  reports.to_json
+  200
 end
